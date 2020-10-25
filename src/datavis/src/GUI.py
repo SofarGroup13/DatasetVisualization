@@ -1,17 +1,5 @@
-"""
-DataVisualization User Interface 
-
-This Script allows the user to visualize the content of ROSBAG file 
-
-This tool accepts only bag file (.bag)
-
-This script requires that `ROS` , 'QT designer' be installed within the Python
-environment you are running this script in.
-
-This file can also be imported as a module 
-"""
-
 #!/usr/bin/env python
+
 import sys
 import rospy
 from std_msgs import msg
@@ -22,8 +10,9 @@ from PyQt5.uic import loadUi
 
 class Datavisualization(QMainWindow):
     """
-    A class used for initialization of MainWindow
-
+    Documentation for a class.
+ 
+    More details.
     """
 
     def __init__(self):
@@ -52,8 +41,6 @@ class Datavisualization(QMainWindow):
 
         Creating a timer object
         Adding actions to timer
-
-
         """
 
         super(Datavisualization, self).__init__()
@@ -116,12 +103,10 @@ class Datavisualization(QMainWindow):
         """
         function will be initiated when the PlayAll button is pressed
 
-        Returns
-        ------- 
-        Increase the value of a progress bar with 1%
-
+        Returns: 
+            Increase the value of a progress bar with 1%
         """
-
+  
         if self.flag3:
             self.progressBar.setValue(self.progressBar.value() + 1)
 
@@ -131,24 +116,24 @@ class Datavisualization(QMainWindow):
         """
         function will be called when the StopAll button is pressed
         
-        Returns
-        ------- 
+        Returns: 
             Will set the value of progressbar to zero
         """
-
+        
         self.progressBar.setValue(0)
 
 
     def QTimer(self):
         """
         Function adds action to timer
-        
         """
 
         self.timeout.connect(self.showTime)
         self.timeout.connect(self.showTime1)
         self.timeout.connect(self.showTime2)
         self.timeout.connect(self.Increase_Step)
+
+
         self.start(1000)
 
 
@@ -157,12 +142,10 @@ class Datavisualization(QMainWindow):
         function will show value of kinect timer
         will check if flag is true and will increment the counter
 
-        Returns
-        -------
-        Display the value of the timer in HH/MM/SS
-
+        Returns:
+            Display the value of the timer in HH/MM/SS
         """
-
+       
         if self.flag:
            
             self.count += 1
@@ -186,17 +169,15 @@ class Datavisualization(QMainWindow):
         self.display2.setText(' %s\n\n%s' % (self.display1, self.display))
 
   
-    def showTime1(self):
+    def showTime1(self):      
         """
         function will show value of SmartWatch timer
         will check if flag is true and will increment the counter
 
-        Returns
-        -------
-        Display the value of the timer in HH/MM/SS
-
+        Returns:
+            Display the value of the timer in HH/MM/SS
         """
-
+       
         if self.flag1:
           
             self.count1 += 1
@@ -224,10 +205,8 @@ class Datavisualization(QMainWindow):
         function will show value of mocap timer
         will check if flag is true and will increment the counter
 
-        Returns
-        -------
-        Display the value of the timer in HH/MM/SS
-
+        Returns:
+            Display the value of the timer in HH/MM/SS
         """
 
         if self.flag2:
@@ -255,9 +234,8 @@ class Datavisualization(QMainWindow):
         """
         function will call the sub-function when PlayAll button is pressed
         
-        Returns
-        -------
-        initiate the timer and progress bar and will set the flags to TRUE
+        Returns:
+            initiate the timer and progress bar and will set the flags to TRUE
         """
         
         self.flag = True
@@ -274,10 +252,9 @@ class Datavisualization(QMainWindow):
         """
         fucntion will call the sub-functions when StopAll button is pressed
         
-        Returns
-        -------
-        This will put everything to stop i-e Timers and progressbar
-        """ 
+        Returns:
+            This will put everything to stop i-e Timers and progressbar
+        """
 
         self.stoptimer()
         self.stoptimer1()
@@ -291,11 +268,9 @@ class Datavisualization(QMainWindow):
         This function is linked to 'FileK' button which will browse the bag file
         The browsing window will open into the home directory of the system
 
-        Returns
-        -------
-        Browse,play and dispay the path of bag file
-         
-        """
+        Returns:
+            Browse,play and dispay the path of bag file 
+         """
 
         print("Browsing")
         filename = QFileDialog.getOpenFileName(self, 'OPEN BAG FILE ', r"home\\", "BAG FILES(*.bag)")
@@ -308,11 +283,9 @@ class Datavisualization(QMainWindow):
         This function is linked to 'Files' button which will browse the bag file
         The browsing window will open into the home directory of the system
 
-        Returns
-        -------
-        Browse,play and dispay the path of bag file
-                 
-        """
+        Returns:
+            Browse,play and dispay the path of bag file
+         """
 
         print("Browsing")
         filename = QFileDialog.getOpenFileName(self, 'OPEN BAG FILE ', r"home\\", "BAG FILES(*.bag)")
@@ -325,11 +298,9 @@ class Datavisualization(QMainWindow):
         This function is linked to 'FileM' button which will browse the bag file
         The browsing window will open into the home directory of the system
 
-        Returns
-        -------
-        Browse,play and dispay the path of bag file
-                  
-        """
+        Returns:
+            Browse,play and dispay the path of bag file         
+         """
 
         print("Browsing")
         filename = QFileDialog.getOpenFileName(self, 'OPEN BAG FILE ', r"home\\zaid", "BAG FILES(*.bag)")
@@ -341,10 +312,8 @@ class Datavisualization(QMainWindow):
         """
         Thisfunction will stop the Kinect timer in an individual capacity
 
-        Returns
-        -------
-        Stop the timer
-
+        Returns:
+            Stop the time
         """
 
         self.flag = False
@@ -359,11 +328,10 @@ class Datavisualization(QMainWindow):
         """
         Thisfunction will stop the SmartWatch timer in an individual capacity
 
-        Returns
-        -------
-        Stop the timer
-
+        Returns:
+            Stop the time
         """
+
         self.flag1 = False
         self.count1 = 0
         self.sec1 = 0
@@ -377,10 +345,8 @@ class Datavisualization(QMainWindow):
         """
         Thisfunction will stop the Kinect timer in an individual capacity
 
-        Returns
-        -------
-        Stop the timer
-
+        Returns:
+            Stop the timer
         """
 
         self.flag2 = False
@@ -396,9 +362,8 @@ class Datavisualization(QMainWindow):
         """
         function exits the UI
 
-        Returns
-        -------
-        Process terminates
+        Returns:
+            Process terminates
         """
 
         sys.exit()
