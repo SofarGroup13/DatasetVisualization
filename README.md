@@ -2,8 +2,8 @@
 This architecture will allow user to visualize the content of Dataset created by our team members.
 
 # Authors 
-- Polaka Surendra : surishoba.surendra@gmail.com
-- chethan Chand   : chetanchandc@gmail.com
+* Polaka Surendra : surishoba.surendra@gmail.com
+* Chetan Chand Chilakapati   : chetanchandc@gmail.com
 # Architecture of the System
 
 Datavisualization GUI is the overall graphical part of the visualization system where user can examine Ros bags i-e The already built dataset of three sensors (Kinect, SmartWatch, Motion Capture Sensor MOCAP) with their respective datatypes (PointCloud2, IMU, Float32). The GUI enable the user regarding the managing the configuration of Rosbags, let the user to keep the track of time through a timer and the executed percentage of the bag files via Progressbar. The progress bar contains scatter,Browse Button  which enables the User to connect GUI with the loaded  files.  GUI consist of three borwising options for the respective sensors, which allows the user to navigates through the system to a folder that contains the required bag files. Upon selecting, the path address will be displayed for an added certainty. After loading the bag files to the GUI, "Play" button will initiate the Processing of the files and Below each of the display window there is STOP button 
