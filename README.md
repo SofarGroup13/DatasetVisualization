@@ -50,7 +50,7 @@ sudo apt-get install python3-pyqt5
 To run the system:
 
 ```
-python gui.py
+python3 gui.py
 ```
 This individual python script can also be run from and python Integrated Development Enviroment (IDE) but make sure to have project enviroment built accordingly with the required libraries installed i-e python and PyQt5 libraries
 
