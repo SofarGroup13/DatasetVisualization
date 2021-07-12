@@ -56,11 +56,12 @@ This individual python script can also be run from and python Integrated Develop
 
 # Video Tutorial
 
-A video showing how our architecture works in real time can be found at the following link.
-[video](
+A video showing how our gui works can be found at the following link.
+[video](https://github.com/SofarGroup13/dataset_visualization/blob/master/video.mp4)
 
 
 
 # Report
 
-Detailed decription of the module can be found in the following report shared on a Google Drive
+Detailed decription of the module can be found in the following report shared on a Google Drive.
+[Report](https://github.com/SofarGroup13/dataset_visualization/blob/master/video.mp4)
