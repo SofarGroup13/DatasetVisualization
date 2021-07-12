@@ -13,8 +13,7 @@ Datavisualization GUI is the overall graphical part of the visualization system 
 
 # Contents of the repository
 In this section we will explain the repository's content
-# GUI Pictures
-Pictures of the visualization window are shown here for user to have a clear idea of how the GUI looks
+
 # Documentation
 
 This directory contains the doxygen documentation in "html" and "latex" format. For a clear and better idea of the project script and its detailed explanation, go to
@@ -24,7 +23,7 @@ Documentation/html/index.html
 ```
 
 # Src
-This folder contains a python script for the initialization of the MainwWindow. It also contains a file by the name of "gui.ui" which is GUI created in Qt designer. For execution of the python script, both the python script and Qt designer file should be in the same directory. There are two other files, resource file with extension ".qrc" and a picture. Both of them are important part of the GUI created in qt designer and the GUI cant be initialized without these two files in the same directory
+This folder contains a python script for the initialization of the MainwWindow. It also contains a file by the name of "gui.ui" which is GUI created in Qt designer. For execution of the python script, both the python script and Qt designer file should be in the same directory.
 
 
 # Installation
