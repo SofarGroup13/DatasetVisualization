@@ -26,8 +26,6 @@ documentation/index/index.html
 # Src
 This folder contains a python script for the initialization of the MainwWindow. It also contains a file by the name of "gui.ui" which is GUI created in Qt designer. For execution of the python script, both the python script and Qt designer file should be in the same directory. There are two other files, resource file with extension ".qrc" and a picture. Both of them are important part of the GUI created in qt designer and the GUI cant be initialized without these two files in the same directory
 
-# srv
-This folder contains the simple ".srv" file that encodes the request-response structure of the service-client pattern
 
 # Installation
 
@@ -52,13 +50,14 @@ sudo apt-get install python3-pyqt5
 To run the system:
 
 ```
-rosrun datavis gui.py
+python gui.py
 ```
 This individual python script can also be run from and python Integrated Development Enviroment (IDE) but make sure to have project enviroment built accordingly with the required libraries installed i-e python and PyQt5 libraries
 
 # Video Tutorial
 
 A video showing how our architecture works in real time can be found at the following link.
+[video](
 
 
 
