@@ -19,7 +19,7 @@ Pictures of the visualization window are shown here for user to have a clear ide
 
 This directory contains the doxygen documentation in "html" and "latex" format. For a clear and better idea of the project script and its detailed explanation, go to
 ```
-documentation/index/index.html
+Documentation/html/index.html
 
 ```
 
